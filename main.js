@@ -138,7 +138,7 @@ function derive(eq, order)
         derive(result, order-1); // recursive call
     }
     catch (err) {
-        showError(err);
+        showError("Unable to find derivative:<br/>" + err);
     }
 }
 
@@ -185,7 +185,9 @@ function updateMathJaxDisplay()
         rawInput = "[d" + order + "/d" + wrt + order + ']' + eq_input;
     }
     let node = math.parse(rawInput);
-    document.getElementById("input_display").innerHTML = "$$" + node.toTex() + "$$";
+    var display = document.getElementById("input_display");
+    display.innerHTML = "$$" + node.toTex() + "$$";
+    display.classList.remove("error");
     MathJax.typeset();
 }
 
@@ -193,6 +195,7 @@ function updateMathJaxDisplay()
 function onInputChanged()
 {
     var submit = document.getElementById("eq_submit")
+    var display = document.getElementById("input_display");
     try {
         updateMathJaxDisplay();
         submit.style.backgroundColor = "#195e83"
@@ -200,7 +203,8 @@ function onInputChanged()
     }
     catch (err) {
         // display syntax error
-        document.getElementById("input_display").innerHTML = err;
+        display.innerHTML = err;
+        display.classList.add("error");
         submit.style.backgroundColor = "grey"
         submit.disabled = true;
     }
