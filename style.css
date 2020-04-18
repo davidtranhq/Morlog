@@ -1,0 +1,145 @@
+#logo
+{
+    width: 200px;
+    padding-left: 70px;
+    padding-bottom: 20px;
+}
+
+#container
+{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+
+#eq_input
+{
+    width: 30%;
+    background-color: #f1f1f1;
+    border: 1px solid transparent;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#eq_submit
+{
+    background-color: #195e83;
+    border: none;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.option_in
+{
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.mathjax
+{
+    width: 50%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin: auto;
+    width: 100%;
+    font-size: 1.3em;
+}
+
+li
+{
+    margin-top: 10px
+}
+
+.title
+{
+    margin: auto;
+    width: 50%;
+}
+
+.subtitle
+{
+    margin: auto;
+    width: 20%;
+    font-size: 0.8em;
+}
+
+/* lines to the left and right of subtitle */
+.subtitle:before, .subtitle:after, .title:before, .title:after
+{
+    content: "";
+    display: inline-block;
+    width: 50%;
+    margin: 0 .5em 0 -55%;
+    vertical-align: middle;
+    border-bottom: 1px solid;
+}
+
+.subtitle:after, .title:after
+{
+    margin: 0 -55% 0 .5em;
+}
+
+
+#results
+{
+    list-style-type: none; /* hide bullets */
+    padding: 0; /* remove indent */
+}
+
+#graph_view
+{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+#graph
+{
+    display: none;
+    width: 500px;
+    height: 500px;
+}
+
+#graph_options
+{
+    position: absolute;
+    left: 73%;
+    list-style-type: none;
+    padding: 0;
+    vertical-align: top;
+}
+
+#graph, #graph_options
+{
+    justify-content: flex-start;
+}
+
+#graph_overlay
+{
+    display: none;
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+#graph_overlay_text
+{
+    display: none;
+    font-size: 1.3em;
+    vertical-align: middle;
+}
+
+.error
+{
+    font-family: sans-serif;
+    color: #c70039;
+}
+
+.option_li
+{
+    text-align: left
+}
