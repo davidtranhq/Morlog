@@ -1,29 +1,29 @@
-:not(.mathjax)
-{
-    font-family: sans-serif;
-}
-
 #logo
 {
-    width: 200px;
+    width: 400px;
     padding-left: 70px;
     padding-bottom: 20px;
 }
 
 #container
 {
-    width: 70%;
+    width: 100%;
     margin: auto;
     text-align: center;
 }
 
+#equation_submit
+{
+    margin-bottom: 20px;
+}
+
 #eq_input
 {
-    width: 30%;
+    width: 60%;
     background-color: #f1f1f1;
     border: 1px solid transparent;
-    padding: 10px;
-    font-size: 16px;
+    padding: 20px;
+    font-size: 32px;
 }
 
 #eq_submit
@@ -32,25 +32,46 @@
     border: none;
     color: white;
     text-align: center;
-    padding: 10px;
-    font-size: 16px;
+    padding: 20px;
+    font-size: 32px;
     text-decoration: none;
+}
+
+#ops
+{
+    font-size: 2em;
+    font-family: sans-serif;
+    margin-bottom: 20px;
+}
+
+input[type="radio"], input[type="checkbox"]
+{
+    transform: scale(2);
+}
+
+
+#options
+{
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-family: sans-serif;
 }
 
 .option_in
 {
-    width: 50px;
-    margin-bottom: 10px;
+    width: 100px;
+    font-size: 1em;
+    margin-bottom: 40px;
 }
 
 .mathjax
 {
-    width: 50%;
+    width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
     margin: auto;
     width: 100%;
-    font-size: 1.3em;
+    font-size: 3em;
 }
 
 li
@@ -62,13 +83,14 @@ li
 {
     margin: auto;
     width: 50%;
+    font-size: 2em;
 }
 
 .subtitle
 {
     margin: auto;
     width: 20%;
-    font-size: 0.8em;
+    font-size: 1.6em;
 }
 
 /* lines to the left and right of subtitle */
